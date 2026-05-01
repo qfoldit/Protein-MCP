@@ -7,6 +7,8 @@
 
 ![ProteinMCP overview](./figures/ProteinMCP.png)
 
+This is part of the [MacromNex](https://github.com/MacromNex) ecosystem.
+
 ## Prerequisites
 
 The following tools must be installed on your system:
@@ -171,3 +173,18 @@ pskill uninstall binder_design # Remove skill
 
 ## Licenses
 This software is open-sourced under [![License](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
+## Citation
+If you're using ProteinMCP in your research or applications, please cite using this BibTeX:
+```bibtex
+@article{xu2026proteinmcp,
+  title={ProteinMCP: An agentic AI framework for autonomous protein engineering},
+  author={Xu, Xiaopeng and Feng, Chenjie and Zha, Chao and He, Wenjia and He, Maolin and Xiao, Bin and Gao, Xin},
+  journal={Protein Science},
+  volume={35},
+  number={4},
+  pages={e70547},
+  year={2026},
+  publisher={Wiley Online Library}
+}
+
