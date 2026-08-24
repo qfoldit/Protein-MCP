@@ -44,5 +44,6 @@
       "consequential": false
     }
   ],
-  "provenance_uri": "qfoldit://adapter/protein-mcp/0.2.0"
+  "provenance_uri": "qfoldit://adapter/protein-mcp/0.2.0",
+  "conformance": {"contract": "qfoldit.scientific-adapter/1.0", "governance": "qfoldit/.github@main"}
 }
