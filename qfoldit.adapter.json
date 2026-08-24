@@ -1,13 +1,48 @@
 {
-  "spec": "qfoldit.engine-adapter/0.1",
-  "engine": {"id": "protein-mcp", "name": "qFoldIT Protein MCP"},
-  "adapter": {"id": "qfoldit-protein-mcp", "version": "0.1.0"},
-  "contracts": {"uag": "qfoldit.uag/0.1"},
+  "spec": "qfoldit.scientific-adapter/1.0",
+  "adapter": {
+    "id": "qfoldit-protein-mcp",
+    "version": "0.2.0",
+    "domain": "protein"
+  },
+  "scientific_engine": "Protein-MCP",
   "capabilities": [
-    {"id": "scene.graph", "level": "adapter", "status": "supported"},
-    {"id": "uag.validate", "level": "adapter", "status": "supported"},
-    {"id": "uag.apply", "level": "adapter", "status": "supported"},
-    {"id": "scientific.visualization", "level": "adapter", "status": "supported"}
+    {
+      "id": "scene.graph",
+      "domain": "protein",
+      "description": "Expose protein-domain scene graph operations through qFoldIT canonical contracts.",
+      "input_schemas": ["qfoldit.scientific.object/1.0", "qfoldit.uag/0.1"],
+      "output_schemas": ["qfoldit.uag/0.1"],
+      "validator_requirements": ["openstructure"],
+      "consequential": false
+    },
+    {
+      "id": "uag.validate",
+      "domain": "protein",
+      "description": "Validate a protein-domain UAG representation before runtime use.",
+      "input_schemas": ["qfoldit.uag/0.1"],
+      "output_schemas": ["qfoldit.validation.completed/1.1"],
+      "validator_requirements": ["openstructure"],
+      "consequential": false
+    },
+    {
+      "id": "uag.apply",
+      "domain": "protein",
+      "description": "Apply an authorized protein-domain UAG operation under mission-scoped governance.",
+      "input_schemas": ["qfoldit.uag/0.1", "qfoldit.scientific-action-envelope/1.0"],
+      "output_schemas": ["qfoldit.scientific-action-envelope/1.0"],
+      "validator_requirements": ["openstructure"],
+      "consequential": true
+    },
+    {
+      "id": "scientific.visualization",
+      "domain": "protein",
+      "description": "Produce non-authoritative visualization representations of protein scientific objects.",
+      "input_schemas": ["qfoldit.scientific.object/1.0"],
+      "output_schemas": ["qfoldit.visualization/1.0"],
+      "validator_requirements": [],
+      "consequential": false
+    }
   ],
-  "notes": "Protein-domain adapter. Scientific truth and validation remain owned by scientific engines and validator services; this repository exposes domain operations through qFoldIT contracts."
+  "provenance_uri": "qfoldit://adapter/protein-mcp/0.2.0"
 }
