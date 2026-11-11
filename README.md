@@ -188,3 +188,8 @@ If you're using ProteinMCP in your research or applications, please cite using t
   publisher={Wiley Online Library}
 }
 
+
+
+## qFoldIT QSIS integration
+
+Protein-MCP is an aggregate toolkit catalog, not one scientific operation. qFoldIT admission requires one QSIS capability manifest per nested provider operation. See [QFOLDIT-QSIS-INTEGRATION.md](QFOLDIT-QSIS-INTEGRATION.md) and the [canonical provider migration register](https://github.com/qfoldit/UAG-SOS/blob/main/SCHEMAS/QSIS/provider-adapter-migration-register.json).
